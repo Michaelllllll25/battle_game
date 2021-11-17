@@ -2,6 +2,9 @@ import pygame
 
 pygame.init()
 
+clock = pygame.time.Clock()
+fps = 60
+
 # game window
 bottom_panel = 150
 screen_width = 800
@@ -131,6 +134,9 @@ bandit2_health_bar = HealthBar(550, screen_height - bottom_panel + 100, bandit2.
 
 run = True
 while run:
+
+    clock.tick(fps)
+
     # Draw background
     draw_background()
 
